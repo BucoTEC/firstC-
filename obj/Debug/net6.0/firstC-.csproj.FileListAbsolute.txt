@@ -1,0 +1,5 @@
+/Users/buco/Documents/code/firstC-/obj/Debug/net6.0/firstC-.csproj.AssemblyReference.cache
+/Users/buco/Documents/code/firstC-/obj/Debug/net6.0/firstC-.GeneratedMSBuildEditorConfig.editorconfig
+/Users/buco/Documents/code/firstC-/obj/Debug/net6.0/firstC-.AssemblyInfoInputs.cache
+/Users/buco/Documents/code/firstC-/obj/Debug/net6.0/firstC-.AssemblyInfo.cs
+/Users/buco/Documents/code/firstC-/obj/Debug/net6.0/firstC-.csproj.CoreCompileInputs.cache
