@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Test;
 
-Test.Safet.Hello();
+Safet.Hello();
+Safet.MyName();
 Console.WriteLine("Hello, World!");

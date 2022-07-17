@@ -3,8 +3,12 @@ using System;
 namespace Test
 {
     class Safet{
-        public void hello(){
-            return Console.WriteLine("Hello from safet");
+        public static void Hello(){
+             Console.WriteLine("Hello from safet");
+        }
+
+        public static void MyName(){
+            Console.WriteLine("Hello my name is Safet");
         }
     }
 }
