@@ -6,7 +6,7 @@ namespace BankAccount;
         public decimal Balance {get;}
 
         private static int numberSeed = 1235;
-
+        public static string test = "hello from test";
         public Account(string name, decimal initialBalance){
             Balance = initialBalance;
             Owner = name;
