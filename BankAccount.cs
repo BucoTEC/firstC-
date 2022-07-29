@@ -1,12 +1,12 @@
 namespace BankAccount;
-    public class BankAccount
+    public class Account
     {
         public string Number {get;}
         public string Owner {get; set;}
         public decimal Balance {get;}
 
 
-        public BankAccount(string name, decimal initialBalance){
+        public Account(string name, decimal initialBalance){
             Balance = initialBalance;
             Owner = name;
         }
