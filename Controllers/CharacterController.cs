@@ -18,13 +18,13 @@ namespace firstC_.Controllers
         }
         [HttpGet]
         public ActionResult<List<Character>> Get(){
-            return _characterService.GetAllCharacter();
+            return Ok(_characterService.GetAllCharacter());
         }   
 
          [HttpGet("{id}")]
         public ActionResult<Character> GetSingleCharacter(int id){
 
-            return _characterService.GetCharacterById(id);
+            return Ok(_characterService.GetCharacterById(id));
 
         }    
 
@@ -32,7 +32,7 @@ namespace firstC_.Controllers
         [HttpPost]
         public ActionResult<List<Character>> AddCharacter(Character newCharacter){
 
-            return _characterService.AddCharacter(newCharacter);
+            return Ok(_characterService.AddCharacter(newCharacter));
         }   
     }
 }
