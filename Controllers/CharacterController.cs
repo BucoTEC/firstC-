@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace firstC_.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/character")]
     public class CharacterController : ControllerBase
     {
 
