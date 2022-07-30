@@ -12,17 +12,17 @@ namespace firstC_.Controllers
 
         private static List<Character> characters = new List<Character>{
             new Character(),
-            new Character {Name = "Adnan"}
+            new Character {Id = 1 ,Name = "Adnan"}
         };
 
 
-        private static Character character = new Character {Name="Safet"};
+        private static Character character = new Character {Id= 3, Name="Safet"};
 
         [HttpGet]
         [Route("GetAll")]
-        public ActionResult<List<Character>> Get(){
+        public ActionResult<List<Character>> Get(int id){
 
-            return Ok(characters);
+            return Ok(characters.FirstOrDefault((character => character.Id == id)));
         }   
 
          [HttpGet]
