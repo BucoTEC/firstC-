@@ -15,10 +15,20 @@ namespace firstC_.Controllers
             new Character {Name = "Adnan"}
         };
 
+
+        private static Character character = new Character {Name="Safet"};
+
         [HttpGet]
+        [Route("GetAll")]
         public ActionResult<List<Character>> Get(){
 
             return Ok(characters);
-        }        
+        }   
+
+         [HttpGet]
+        public ActionResult<Character> GetSingleCharacter(){
+
+            return Ok(character);
+        }       
     }
 }
