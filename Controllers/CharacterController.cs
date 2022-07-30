@@ -30,6 +30,13 @@ namespace firstC_.Controllers
 
             return Ok(characters.FirstOrDefault((character => character.Id == id)));
 
-        }       
+        }    
+
+
+        [HttpPost]
+        public ActionResult<List<Character>> AddCharacter(Character newCharacter){
+            characters.Append(newCharacter);
+            return Ok(characters);
+        }   
     }
 }
