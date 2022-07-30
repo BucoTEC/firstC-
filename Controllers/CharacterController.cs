@@ -13,7 +13,7 @@ namespace firstC_.Controllers
         private static Character knight = new Character();
 
         [HttpGet]
-        public IActionResult Get(){
+        public ActionResult<Character> Get(){
 
             return Ok(knight);
         }        
