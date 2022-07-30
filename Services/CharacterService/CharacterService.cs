@@ -7,19 +7,34 @@ namespace firstC_.Services.CharacterService
 {
     public class CharacterService : ICharacterService
     {
+
+
+        private static List<Character> characters = new List<Character>{
+            new Character(),
+            new Character {Id = 1 ,Name = "Adnan"}
+        };
+         private static Character character = new Character {Id= 3, Name="Safet"};
+
+
+
+
+
+
         public List<Character> AddCharacter(Character newCharacter)
         {
-            throw new NotImplementedException();
+            characters.Add(newCharacter);
+
+            return characters;
         }
 
         public List<Character> GetAllCharacter()
         {
-            throw new NotImplementedException();
+            return characters;
         }
 
         public Character GetCharacterById(int id)
         {
-            throw new NotImplementedException();
+            return characters.FirstOrDefault(c => c.Id == id);
         }
     }
 }
