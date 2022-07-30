@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using firstC_.Services.CharacterService;
 namespace firstC_.Controllers
 {
     [ApiController]
@@ -10,33 +11,28 @@ namespace firstC_.Controllers
     public class CharacterController : ControllerBase
     {
 
-        private static List<Character> characters = new List<Character>{
-            new Character(),
-            new Character {Id = 1 ,Name = "Adnan"}
-        };
-
-
-        private static Character character = new Character {Id= 3, Name="Safet"};
-
+        private readonly ICharacterService _characterService;
+        public CharacterController(ICharacterService characterService)
+        {
+            _characterService = characterService;
+        }
         [HttpGet]
         public ActionResult<List<Character>> Get(){
-
-            return Ok(characters);
+            return _characterService.GetAllCharacter();
         }   
 
          [HttpGet("{id}")]
         public ActionResult<Character> GetSingleCharacter(int id){
 
-
-            return Ok(characters.FirstOrDefault((character => character.Id == id)));
+            return _characterService.GetCharacterById(id);
 
         }    
 
 
         [HttpPost]
         public ActionResult<List<Character>> AddCharacter(Character newCharacter){
-            characters.Add(newCharacter);
-            return Ok(characters);
+
+            return _characterService.AddCharacter(newCharacter);
         }   
     }
 }
