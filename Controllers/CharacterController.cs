@@ -19,16 +19,17 @@ namespace firstC_.Controllers
         private static Character character = new Character {Id= 3, Name="Safet"};
 
         [HttpGet]
-        [Route("GetAll")]
-        public ActionResult<List<Character>> Get(int id){
+        public ActionResult<List<Character>> Get(){
 
-            return Ok(characters.FirstOrDefault((character => character.Id == id)));
+            return Ok(characters);
         }   
 
-         [HttpGet]
-        public ActionResult<Character> GetSingleCharacter(){
+         [HttpGet("{id}")]
+        public ActionResult<Character> GetSingleCharacter(int id){
 
-            return Ok(character);
+
+            return Ok(characters.FirstOrDefault((character => character.Id == id)));
+
         }       
     }
 }
