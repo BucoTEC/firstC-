@@ -16,7 +16,7 @@ namespace firstC_.Controllers
         };
 
         [HttpGet]
-        public ActionResult<Character> Get(){
+        public ActionResult<List<Character>> Get(){
 
             return Ok(characters);
         }        
