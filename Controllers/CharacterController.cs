@@ -10,12 +10,15 @@ namespace firstC_.Controllers
     public class CharacterController : ControllerBase
     {
 
-        private static Character knight = new Character();
+        private static List<Character> characters = new List<Character>{
+            new Character(),
+            new Character {Name = "Adnan"}
+        };
 
         [HttpGet]
         public ActionResult<Character> Get(){
 
-            return Ok(knight);
+            return Ok(characters);
         }        
     }
 }
