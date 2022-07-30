@@ -20,21 +20,27 @@ namespace firstC_.Services.CharacterService
 
         // SERVICES FOR CHARACTER  
 
-        public async Task<List<Character>> AddCharacter(Character newCharacter)
+        public async Task<ServiceRes<List<Character>>> AddCharacter(Character newCharacter)
         {
+
+            var res = new ServiceRes<List<Character>>();
              characters.Add(newCharacter);
-
-            return characters;
+            res.Data = characters;
+            return res;
         }
 
-        public async Task<List<Character>> GetAllCharacter()
+        public async Task<ServiceRes<List<Character>>> GetAllCharacter()
         {
-            return characters;
+            var res = new ServiceRes<List<Character>>();
+            res.Data = characters;
+            return res;
         }
 
-        public async Task<Character> GetCharacterById(int id)
+        public async Task<ServiceRes<Character>> GetCharacterById(int id)
         {
-            return characters.FirstOrDefault(c => c.Id == id);
+            var res = new ServiceRes<Character>();
+            res.Data = characters.FirstOrDefault(c => c.Id == id);
+            return res;
         }
     }
 }
