@@ -35,7 +35,7 @@ namespace firstC_.Controllers
 
         [HttpPost]
         public ActionResult<List<Character>> AddCharacter(Character newCharacter){
-            characters.Append(newCharacter);
+            characters.Add(newCharacter);
             return Ok(characters);
         }   
     }
