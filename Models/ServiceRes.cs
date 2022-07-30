@@ -10,6 +10,6 @@ namespace firstC_.Models
         public T? Data { get; set; }
         public bool Succes { get; set; } = true;
 
-        public string Message { get; set; } = string.Empty;
+        public string Message { get; set; } = "All good";
     }
 }
