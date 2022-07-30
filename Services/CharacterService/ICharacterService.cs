@@ -7,10 +7,10 @@ namespace firstC_.Services.CharacterService
 {
     public interface ICharacterService
     {
-        List<Character> GetAllCharacter();
+        Task<List<Character>> GetAllCharacter();
 
-        Character GetCharacterById(int id);
+        Task<Character> GetCharacterById(int id);
 
-        List<Character> AddCharacter(Character newCharacter);
+        Task<List<Character>> AddCharacter(Character newCharacter);
     }
 }
