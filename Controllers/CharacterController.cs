@@ -16,13 +16,16 @@ namespace firstC_.Controllers
         {
             _characterService = characterService;
         }
+
+        // ROUTES
+
         [HttpGet]
-        public async Task<ActionResult<List<Character>>> Get(){
+        public async Task<ActionResult<ServiceRes<List<Character>>>> Get(){
             return Ok(await _characterService.GetAllCharacter());
         }   
 
          [HttpGet("{id}")]
-        public async Task<ActionResult<Character>> GetSingleCharacter(int id){
+        public async Task<ActionResult<ServiceRes<Character>>> GetSingleCharacter(int id){
 
             return Ok(await _characterService.GetCharacterById(id));
 
@@ -30,7 +33,7 @@ namespace firstC_.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult<List<Character>>> AddCharacter(Character newCharacter){
+        public async Task<ActionResult<ServiceRes<List<Character>>>> AddCharacter(Character newCharacter){
 
             return Ok(await _characterService.AddCharacter(newCharacter));
         }   
